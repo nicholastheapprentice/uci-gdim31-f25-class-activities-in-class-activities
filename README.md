@@ -1,7 +1,11 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Write your W1 activity Devlog here.
+Camera was previously a child object of Cat GameObject. When it is moved off, it no longer inherits the properties, such as coordinate and direction, from the parent object Cat. So when we start the game, the Camera would stay still while the Cat walks in the scene.
+
+Here's the itch.io link:
+
+https://nikolai16.itch.io/classpractice20260928
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
