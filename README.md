@@ -19,6 +19,25 @@ I forgot what is was specifically, but it should be like "Don't forget to add 'f
 
 
 ### W3
+Activity 1
+1. public string GetResponse(int friendshipLevel, bool flag);
+In a visual novel , the frienship level should be a whole number. The flag, since it is telling whether or not you know the secret, should be a boolean. And we were asked to give out a text response, so the output should be string. 
+
+2. public void SetLightDimness(float sanityLevel);
+Here, sanity level is supposed to be a decimal number, so float best fits the parameter.
+
+3. public boolean DidPlayerHitBeat(float actualHitTime);
+
+
+Activity 2
+A class is like a car part manufactured in some factories, and a component is a specific functioning part on a Volkswagen, like a wheel or something.
+
+
+
+
+### W4
+
+
 
 ## Open-Source Assets
 ### W1
