@@ -33,7 +33,7 @@ Activity 2
 A class is like a car part manufactured in some factories, and a component is a specific functioning part on a Volkswagen, like a wheel or something.
 
 Activity 3
-
+This is because we wrote a line to calculate the velocity of the ball and then updates the color in renderer using value from the velocity calculation.
 
 
 ### W4
