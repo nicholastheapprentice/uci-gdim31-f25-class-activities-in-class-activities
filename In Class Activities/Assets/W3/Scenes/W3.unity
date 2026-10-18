@@ -455,7 +455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallW3
   ballRenderer: {fileID: 223092523}
   _rigidbody: {fileID: 223092522}
-  _speedMultiplier: 1.1
+  _speedMultiplier: 1.2
   _speedThreshold: 10
 --- !u!50 &223092522
 Rigidbody2D:
@@ -534,7 +534,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.38993704, g: 0.038012665, b: 0.038012665, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallW3
   ballRenderer: {fileID: 262664842}
   _rigidbody: {fileID: 262664841}
-  _speedMultiplier: 1.1
+  _speedMultiplier: 1.2
   _speedThreshold: 10
 --- !u!50 &262664841
 Rigidbody2D:
@@ -708,7 +708,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.80187166, b: 0, a: 1}
+  m_Color: {r: 0.45911938, g: 0.37660414, b: 0.053419467, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallW3
   ballRenderer: {fileID: 2077322701}
   _rigidbody: {fileID: 2077322700}
-  _speedMultiplier: 1.1
+  _speedMultiplier: 1.2
   _speedThreshold: 10
 --- !u!50 &2077322700
 Rigidbody2D:
@@ -2800,7 +2800,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.18066916, g: 0.29793718, b: 0.91194963, a: 1}
+  m_Color: {r: 0.094082415, g: 0.14986722, b: 0.44654083, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

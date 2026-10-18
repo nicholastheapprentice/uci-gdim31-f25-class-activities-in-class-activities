@@ -32,7 +32,7 @@ public class BallW3: MonoBehaviour {
         // STEP 9 -------------------------------------------------------------
         // After you write the GetColorMultiplier method, simply uncomment
         //      the below line.
-        ballRenderer.color *= GetColorMultiplier(Mathf.Abs(_rigidbody.linearVelocity.x), Mathf.Abs(_rigidbody.linearVelocity.y));
+        ballRenderer.color *= GetColorMultiplier(Mathf.Abs(_rigidbody.linearVelocityX), Mathf.Abs(_rigidbody.linearVelocityY));
         // STEP 9 -------------------------------------------------------------
     }
 
