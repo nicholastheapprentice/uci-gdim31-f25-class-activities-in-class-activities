@@ -32,6 +32,7 @@ Here, sanity level is supposed to be a decimal number, so float best fits the pa
 Activity 2
 A class is like a car part manufactured in some factories, and a component is a specific functioning part on a Volkswagen, like a wheel or something.
 
+Activity 3
 
 
 

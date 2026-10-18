@@ -132,7 +132,7 @@ public class CatW3 : MonoBehaviour
     {
         // write Step 3 below this comment!
         _health -= 1;
-
+        _healthText.text = "health: " + _health;
 
         // STEP 5 -------------------------------------------------------------
         // Once you've finished Step 4, CALL the GetHealthSpeechText method
@@ -160,7 +160,6 @@ public class CatW3 : MonoBehaviour
     {
         if (_health < 0.5 * _health)
         {
-
             return "OH NO!";
         }
         else { 
