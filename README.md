@@ -46,7 +46,7 @@ This is because we wrote a line to calculate the velocity of the ball and then u
 **Table: 9**
 
 
-1. The cat and the soccerball needs RigidBody since we want them to be able to bounce on each other. The goal is triggered on since we don't want it to actually collide and it needs to detect whether a goal is made.
+1. The cat and the soccerball needs RigidBody since we want them to be able to bounce on each other. The goal is triggered on since the ball has to go through and we don't want it to actually collide, so it needs to detect whether a goal is made.
 
 2. I didn't use the update method in Unity but instead made up one, so when I playtested the timer it didn't work. I then asked my peers how they solved it and used update.
 
