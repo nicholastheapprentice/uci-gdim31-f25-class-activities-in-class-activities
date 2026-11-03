@@ -51,6 +51,18 @@ This is because we wrote a line to calculate the velocity of the ball and then u
 2. I didn't use the update method in Unity but instead made up one, so when I playtested the timer it didn't work. I then asked my peers how they solved it and used update.
 
 
+
+
+### W5
+1. We would need Transform & NavMeshAgent in the class. 
+
+2. I would use Start() in this class, since we want the deer to start walking toward the target at the very beginning.
+
+3. The method should pass the value in NavMeshAgent in the inspector, which contains the necessary information for navigating the deer.
+
+
+Also, target.position should be used to gets the position of the target from Transform. 
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
