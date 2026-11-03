@@ -11,47 +11,31 @@ public class CatW5 : MonoBehaviour
 
     private void Update()
     {
-        // STEP 1 & 2 ---------------------------------------------------------
-        // STEP 1
-        // This CatW5 class is a Component on the Cat GameObject. It controls
-        //      the cat's movement.
-        //
-        // The Cat should move forwards and backwards with the W and S keys.
-        //
-        // Use the "static properties" listed under the Vector3 documentation:
-        //  https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Vector3.html
-        //
-        // to change the value of the translation variable,
-        // and then call Translate on this GameObject's transform to make it move
-        // using translation, _moveSpeed, and Time.deltaTime.
-        //
-        // Ask yourself:
-        //      Which axis moves the cat forwards and backwards?
-        //      Which Vector3 static property would be useful here based on
-        //          changing that axis?
-        //      Should I modify translation with Vector addition, or multiplication,
-        //          or both?
-        //
-        // STEP 2
-        // After Step 1 is working, add more code to make it possible to flip
-        //      the player's control scheme.
-        // The _flipWSControls member variable, which we can change in the Inspector,
-        //      determines if our controls should be flipped.
-        // If _flipWSControls is true, interpret the value of translation as the
-        //      OPPOSITE value, so that W moves the player backwards and S moves
-        //      them forwards.
-        //
-        // MULTIPLY one of your vectors with a certain value to do this. >:)
+        // STEP 1 -----------------------------------------------------------------
+        // W/S drive the cat along its own forward axis (local Z).
+        // Vector3.forward is (0, 0, 1); scaling it by the vertical input gives
+        // a direction, and scaling again by _moveSpeed * deltaTime converts it
+        // into this frame's displacement.
+        Vector3 translation = Vector3.forward * Input.GetAxis("Vertical");
 
-        Vector3 translation = Vector3.zero;
-        
+        // STEP 2 -----------------------------------------------------------------
+        // Flipping the controls is just negating the direction: multiplying the
+        // vector by -1 turns forward into backward.
+        float flip = _flipWSControls ? -1.0f : 1.0f;
 
+        // Scale by speed and by the frame's elapsed time so movement is
+        // frame-rate independent.
+        translation = translation * _moveSpeed * flip * Time.deltaTime;
 
-        // STEP 1 & 2 ---------------------------------------------------------
+        // Translate applies the displacement in local space, so "forward" always
+        // means the direction the cat is currently facing.
+        transform.Translate(translation);
 
+        // Turn with A/D.
         float rotation = Input.GetAxis("Horizontal") * _turnSpeed * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
 
+        // Drive the walk animation whenever the cat is moving or turning.
         if (translation.magnitude != 0.0f || rotation != 0.0f)
         {
             _animator.SetBool(_isWalkingName, true);
