@@ -20,7 +20,7 @@ public class BatManager : MonoBehaviour
     // Add a member variable named "_messages" that's an array of strings.
     // In the Inspector, add at least a few different messages for the bats to
     //      say when they reach the player.
-    
+    [SerializeField] private string[] _messages;
     // STEP 3 -----------------------------------------------------------------
 
     [SerializeField] private float[] _newTextTimers;
@@ -39,7 +39,7 @@ public class BatManager : MonoBehaviour
         // That means the bat at _bats[0] has a timer at _newTextTimers[0],
         //      the bat at _bats[1] has a timer at _newTextTimers[1],
         //      and so on.
-        // _newTextTimers = new [_bats.Length];
+        _newTextTimers = new float[_bats.Length];
         // STEP 6 -------------------------------------------------------------
     }
 
@@ -50,6 +50,10 @@ public class BatManager : MonoBehaviour
         // Loop through all of the entries in _newTextTimers, and increase each
         //      timer's value by the amount of time that passed this frame.
 
+        for (int i = 0; i < _newTextTimers.Length; i++)
+        {
+            _newTextTimers[i] += Time.deltaTime;
+        }
 
         // STEP 7 -------------------------------------------------------------
 
@@ -68,10 +72,16 @@ public class BatManager : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            _bats[i].enableChase();
-            if (Vector2.Distance(_bats[i].transform.position, _playerTransform.position) <= _interactDistance)
+
+            if (Vector2.Distance(_bats[i].transform.position, _playerTransform.position) >= _interactDistance)
             {
-                _bats[i].disableChase();    
+                _bats[i].disableChase();
+            }
+            else { _bats[i].enableChase(); }
+
+            if (Vector2.Distance(_bats[i].transform.position, _playerTransform.position) <= _overlapDistance) 
+            {
+                CreateReactions(_bats[i]);
             }
 
         }
@@ -104,7 +114,8 @@ public class BatManager : MonoBehaviour
         //
         // The first argument to SpawnReactionUI is same bat in the parameters
         //      of CreateReactions.
-        
+        SpawnReactionUI(bat, _messages[Random.Range(0, 5)]);
+        //Debug.Log(_messages[Random.Range(0, 5)]);
         // STEP 5 -------------------------------------------------------------
     }
 
@@ -119,7 +130,7 @@ public class BatManager : MonoBehaviour
         // /* starts the comments, and */ ends it.
         // Simply uncomment the below lines by removing the /* and */ to finish.
 
-        /*
+        
         int index = System.Array.IndexOf(_bats, bat);
         
         GridLayoutGroup layout = bat.GetComponentInChildren<GridLayoutGroup>();
@@ -129,7 +140,7 @@ public class BatManager : MonoBehaviour
             TMP_Text textObj = Instantiate(_reactionUiPrefab, layout.transform);
             textObj.text = message;
         }
-        */
+        
 
         // STEP 8 -------------------------------------------------------------
     }

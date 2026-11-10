@@ -4,9 +4,10 @@ using UnityEngine.Rendering;
 // Write the BatW6 class here.
 public class BatW6 : MonoBehaviour
 {
-    [SerializeField] float _speed = 0.001f;
+    [SerializeField] float _speed = 0.1f;
     [SerializeField] private Transform _playerTransform;
     private bool enable;
+    private float _deltaTime;
 
     public void enableChase() { 
         enable = true;
@@ -17,8 +18,9 @@ public class BatW6 : MonoBehaviour
     {
         if (enable == true) 
         {
+            _deltaTime = Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, _playerTransform.position, _speed / _deltaTime)  ;
 
-            transform.position = Vector3.MoveTowards(transform.position, _playerTransform.position, _speed);
         }
     }
 
