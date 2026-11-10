@@ -63,6 +63,18 @@ This is because we wrote a line to calculate the velocity of the ball and then u
 
 Also, target.position should be used to gets the position of the target from Transform. 
 
+### W7
+**Part 1**
+1. https://docs.google.com/document/d/1crDX6_ljdbrT8OOdQbNwN7QxS_CrQY8VUW1fGK32XYQ/edit?tab=t.5n8krrz8s4x2#heading=h.n5b8vb26zho
+
+**Part 2**
+1. We need a Transform to store the location of player character and a float to store the speed.
+
+2. We would use Monobehviour(), Update() and two void methods.
+
+3. We need Monobehaviour() to add this script as a component to Unity and Update() to move in each frame. The two void methods will be used to enable and disable the movement.
+
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
