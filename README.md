@@ -74,6 +74,9 @@ Also, target.position should be used to gets the position of the target from Tra
 
 3. We need Monobehaviour() to add this script as a component to Unity and Update() to move in each frame. The two void methods will be used to enable and disable the movement.
 
+### W8
+1. The orginal line used Vector3 instead of transform to change Muskrat's position, which changes its x, y, z value relative to the world instead of moving it forward on its own coordinates.
+
 
 ## Open-Source Assets
 ### W1
